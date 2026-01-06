@@ -17,7 +17,7 @@ jobs:
           username: ${{ secrets.VPS_USER }}
           password: ${{ secrets.PASSWORD }}
           script: |
-            sudo cd /var/www/portfolio
+            cd /var/www/portfolio
             sudo git pull origin main
             sudo npm install
             sudo npm run build

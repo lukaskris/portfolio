@@ -17,7 +17,9 @@ jobs:
           username: ${{ secrets.VPS_USER }}
           password: ${{ secrets.PASSWORD }}
           script: |
+            set -e
             cd /var/www/portfolio
+            sudo git stash push -m "pre-deploy autostash $(date +%F-%H%M)" || true
             sudo git pull origin main
             sudo npm install
             sudo npm run build

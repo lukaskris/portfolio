@@ -22,5 +22,6 @@ jobs:
             sudo git stash push -m "pre-deploy autostash $(date +%F-%H%M)" || true
             sudo git pull origin main
             sudo npm install
+            sudo rm -rf .next
             sudo NODE_OPTIONS="--max-old-space-size=768" npm run build
             sudo pm2 restart portfolio

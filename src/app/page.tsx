@@ -188,7 +188,7 @@ export default function Home() {
               <div className="bg-blue-50 p-4 rounded-lg">
                 <h4 className="font-semibold text-gray-800 mb-2">Technical Achievements</h4>
                 <ul className="list-disc list-inside text-gray-600 space-y-1">
-                  <li>Built a 5-agent sales-insight pipeline over SQL Server. Daily insights, zero human in the loop</li>
+                  <li>Built an agentic AI system over the company&apos;s data lake (SAP, ND6, SQL Server, vector store): leadership reads daily insights and next actions, zero operators</li>
                   <li>Built an e-invoice &amp; withholding-tax (PPh) verification service: local vision LLM + 20+ rules, ~90 vendors</li>
                   <li>Built UNSPSC material classification feeding SAP master data, human-in-the-loop with regression-scored changes</li>
                   <li>Built FX·AI currency-rate capture: 4-tier chain with vision LLM reading bot-walled sources</li>
@@ -519,14 +519,14 @@ export default function Home() {
                     <h3 className="text-xl font-bold text-gray-800">Sales-Insight Agent Pipeline</h3>
                     <span className="bg-orange-100 text-orange-800 text-xs px-2 py-1 rounded-full">Multi-Agent</span>
                   </div>
-                  <p className="text-gray-600 mb-4">Five specialized agents turn a SQL Server sales database into daily insights: SQL generation, SQL review, data analysis, narrative insight, and a quality reviewer that rejects weak output and retries.</p>
+                  <p className="text-gray-600 mb-4">An agentic AI system for the group&apos;s data lake: it connects SAP, ND6 document archives, SQL Server databases, and a vector store, then turns them into daily insights, recommendations, and next actions that leadership reads every morning.</p>
                   <div className="mb-4">
-                    <h4 className="font-medium text-gray-700 mb-1">Architecture:</h4>
+                    <h4 className="font-medium text-gray-700 mb-1">How it runs:</h4>
                     <ul className="list-disc list-inside text-gray-600 text-sm space-y-1">
-                      <li>Cloud LLM → self-hosted vLLM (Qwen 14B) fallback chain</li>
-                      <li>Hybrid BM25 + semantic RAG over schema chunks</li>
-                      <li>SQLite + ChromaDB query caching, incremental runs</li>
-                      <li>FastAPI dashboard streams generation progress</li>
+                      <li>Five specialist agents draft and cross-check the analysis</li>
+                      <li>A quality reviewer rejects weak output before anyone reads it</li>
+                      <li>Fallback chain from cloud LLMs to self-hosted vLLM (Qwen 14B)</li>
+                      <li>Hybrid BM25 + semantic RAG; caching answers repeat questions at zero model cost</li>
                     </ul>
                   </div>
                   <div className="flex flex-wrap gap-2 mb-3">

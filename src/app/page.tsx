@@ -224,6 +224,7 @@ export default function Home() {
                   <li>Reduced app sizes by 40-60%</li>
                   <li>Improved performance through Compose</li>
                   <li>Document Classification with CNN TensorFlow</li>
+                  <li>On-device odometer AI (YOLOv11 + fine-tuned Keras OCR) in VRA Time Sheet, live on Google Play</li>
                   <li>Standardized Android development practices</li>
                 </ul>
               </div>
@@ -604,10 +605,43 @@ export default function Home() {
                   </div>
                 </div>
               </div>
+
+              {/* 9. VRA Time Sheet — on-device vehicle AI */}
+              <div className="flex-shrink-0 w-96 bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition">
+                <div className="gradient-bg h-48 flex items-center justify-center">
+                  <i className="fas fa-camera text-white text-6xl"></i>
+                </div>
+                <div className="p-6">
+                  <div className="flex justify-between items-start mb-2">
+                    <h3 className="text-xl font-bold text-gray-800">VRA Time Sheet — On-Device Vehicle AI</h3>
+                    <span className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">Computer Vision</span>
+                  </div>
+                  <p className="text-gray-600 mb-4">The group&apos;s fleet timesheet app, live on Google Play, reads odometers by camera: a YOLOv11 model detects the gauge, then a fine-tuned Keras OCR model reads digital and analog odometers on cars, trucks, and excavators — all on the device.</p>
+                  <div className="mb-4">
+                    <h4 className="font-medium text-gray-700 mb-1">What I built:</h4>
+                    <ul className="list-disc list-inside text-gray-600 text-sm space-y-1">
+                      <li>YOLOv11 object detection for odometer localization</li>
+                      <li>Keras OCR fine-tuned on digital and analog gauges</li>
+                      <li>Works across cars, trucks, and digital-excavator displays</li>
+                      <li>On-device inference: no server round-trip, manual entry cut</li>
+                    </ul>
+                  </div>
+                  <div className="flex flex-wrap gap-2 mb-3">
+                    <span className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">YOLOv11</span>
+                    <span className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">Keras</span>
+                    <span className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">TensorFlow Lite</span>
+                    <span className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">Android</span>
+                  </div>
+                  <a href="https://play.google.com/store/apps/details?id=com.forestry.vra" target="_blank" rel="noreferrer" className="text-sm font-medium text-blue-600 hover:underline">
+                    <i className="fab fa-google-play mr-1"></i> Live on Google Play
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
           {/* Mobile Indicators */}
           <div className="flex justify-center space-x-2 mt-6 md:hidden">
+            <div className="w-3 h-3 rounded-full bg-gray-300"></div>
             <div className="w-3 h-3 rounded-full bg-blue-500"></div>
             <div className="w-3 h-3 rounded-full bg-gray-300"></div>
             <div className="w-3 h-3 rounded-full bg-gray-300"></div>
